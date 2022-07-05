@@ -1,0 +1,32 @@
+- Creating single spa application: 
+    1. npx create-single-spa
+        - Enter project folder name : If first time it will be a root folder
+        - Type for first time: single-spa root config : It will create a main container
+        - select any package manager
+        - Choose if you want ts or not
+        - choose if you want layout or not
+        - enter organisation name
+        - root folder is ready
+        - navigate to folder
+        - run npm start
+
+ 
+    2. Creating child applications:
+        - Enter child project folder name
+        - Type: single-spa application / parcel
+        - select any package manager
+        - Choose if you want ts or not
+        - choose if you want layout or not
+        - enter organisation name
+        - root folder is ready
+        - navigate to folder
+        - run: npm start -- --port 8500
+        - Go to given single spa playground url
+        - If url breaks go to package.json file
+        - and run standalone script
+        - go to localhost url
+
+        - Go to network => refresh page => go to child app file => preview => copy url
+        - Now go to root folder => index.ejs => islocal imports => paste "@org_name/child_project_name" : "url"
+        - This will register react app with base app
+        - Go to org_name-root-config.js file and register new url and app => check app-container/src/viraj-root-config.js
